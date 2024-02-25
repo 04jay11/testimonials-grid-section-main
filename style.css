@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --grayish-blue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  background-color: var(--light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 1rem;
+  font-size: 13px;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1100px;
+  display: grid;
+  grid-template: auto auto / repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.container {
+  padding: 26px 32px;
+  border-radius: 10px;
+  display: grid;
+  row-gap: 1.375rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.bg-purple {
+  background-color: var(--violet);
+  grid-column: span 2;
+  position: relative;
+}
+
+.quotation-icon {
+  position: absolute;
+  top: 0;
+  right: 5.125rem;
+  width: 8.5rem;
+  mix-blend-mode: lighten;
+}
+
+.img-container {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--light-grayish-blue);
+}
+
+img {
+  width: 100%;
+}
+
+.name {
+  color: var(--white);
+  font-size: 15px;
+}
+
+.profession {
+  color: var(--white);
+  opacity: 50%;
+}
+
+.big-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.small-text {
+  color: var(--white);
+  opacity: 70%;
+  line-height: 1.5;
+}
+
+.bg-grayish-blue {
+  background-color: var(--grayish-blue);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-white h2,
+.bg-white p {
+  color: var(--blackish-blue);
+}
+
+.span-2 {
+  grid-column: 4;
+  grid-row: 1/ 3;
+}
+
+.bg-blackish-blue {
+  background-color: var(--blackish-blue);
+  grid-column: span 2;
+}
+
+@media (max-width: 718px) {
+  main {
+    display: block;
+  }
+
+  .container {
+    margin-bottom: 1.5rem;
+  }
+
+  .span-2 {
+    margin-bottom: 0;
+  }
+
+  .quotation-icon {
+    right: 2.125rem;
+    width: 7.5rem;
+  }
+}
